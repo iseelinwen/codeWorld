@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				list-style: none;
+				padding: 0;
+				overflow: hidden;
+				width: 306px;
+				margin:400px 400px 20px 400px;
+				box-shadow: 10px 10px gray;
+			}
+			li{
+				float: left;
+				width: 100px;
+				height: 100px;
+				border: 1px solid;
+				
+			}
+			input{
+				margin-left: 495px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<input type="button" name="" id="" value="天地无极，乾坤借法" />
+	</body>
+	<script type="text/javascript">
+		//获取元素
+		var lis = document.getElementsByTagName("li");
+		var btn = document.getElementsByTagName("input")[0]
+		btn.onclick = what;
+		/*setInterval(func,time)
+		 * 间隔time毫秒去执行func
+		 * 时间单位ms 1s=1000ms
+		 */
+		 function what() {
+		 	setInterval(change,1);
+		 }
+		 
+		   function change() {
+			for (var i=0;i<9;i++) {
+				//生成随机色 r g b
+				var r =Math.floor(Math.random()*256);
+				var g =Math.floor(Math.random()*256);
+				var b =Math.floor(Math.random()*256);
+				//为每一个列标签赋颜色值
+				lis[i].style.backgroundColor = "rgb(" + r + "," + g+ "," + b+")";
+			}
+		}
+	</script>
+</html>
